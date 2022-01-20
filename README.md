@@ -1,5 +1,6 @@
 # README-generator
-
+## Walkthrough video
+https://watch.screencastify.com/v/zQNGXo5xdAqe6GKNu3nU
 ## Description
 To generate a README.md file in a timely manner.
 ## Table of Content
