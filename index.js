@@ -26,15 +26,20 @@ const questions = [
     message: 'What is the description for the README'
   },
   {
-    type: 'confirm',
+    type: 'input',
     name: 'install',
-    message: 'does your README need  a installation section?',
+    message: 'What are your installation instructions?',
     default: false
   },
   {
     type: 'input',
     name: 'usage',
     message: 'Provide instructions for the application'
+  },
+  {
+    type: 'input',
+    name: 'contributing',
+    message: 'Who contributed to this application'
   },
   {
     type: "list",
@@ -58,9 +63,9 @@ function writeToFile(fileName, data) {
  //writeToFile("README.md");
 // TODO: Create a function to initialize app
 function init() {inquirer.prompt(questions).then((answers) => {
- const {title, username,email, description, install, usage,license} = answers;
-  writeToFile('README.md',generateMarkdown(title, username,email, description,install,usage,license));
-  
+ const {title, username,email, description, install, usage,contributing,license} = answers;
+  writeToFile('README.md',generateMarkdown(title, username,email, description,install,usage,contributing,license));
+
 }); }
 
 // Function call to initialize app
